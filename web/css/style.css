@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Author     : nanajjar
+*/
+#mainContent{
+    width:900px;
+    height: 40%;
+    margin:3% auto;
+    font-size:x-large;
+    font-family:sans-serif;
+    overflow: auto;
+    height: 900px;
+    overflow: scroll ;
+    padding: 30px;
+}
+table, th, td {
+   border: 1px solid black;
+}
+td{
+    padding:10px;
+}
