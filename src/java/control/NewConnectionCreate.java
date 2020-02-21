@@ -90,6 +90,7 @@ public class NewConnectionCreate extends HttpServlet {
         //request for all connections
         String action = null;
         action = request.getParameter("connectionId");
+        
         //request for single connection
         if(action == null || action.isEmpty()){
             //System.out.println(action);
