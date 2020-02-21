@@ -91,7 +91,6 @@ public class NewConnectionCreate extends HttpServlet {
         String action = null;
         action = request.getParameter("connectionId");
         //request for single connection
-               
         if(action == null || action.isEmpty()){
             //System.out.println(action);
             try {
