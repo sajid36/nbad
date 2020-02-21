@@ -17,7 +17,7 @@
                     <a class="nav-link" href="#">Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="savedConnections.jsp">Sign up</a>
+                    <a class="nav-link" href="#">Sign up</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,7 +28,7 @@
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 
                         <form>
-                            <button class="btn btn-success btn-block" type="submit" formaction="savedConnections.html">Sign in</button>
+                            <button class="btn btn-success btn-block" type="submit" formaction="#">Sign in</button>
                             <a href="#" id="forgot_pswd">Forgot password?</a>
                         </form>
 

@@ -68,6 +68,13 @@ public class NewConnectionCreate extends HttpServlet {
             connection.setHost(request.getParameter("host"));
             String HardDB = getServletContext().getRealPath("/") + "WEB-INF\\connections.txt";
             ConnectionIO.addRecord(connection, HardDB);
+            try {
+                ArrayList<Connection> connectionsList = ConnectionIO.getConnections(HardDB);
+                request.setAttribute("ConList", connectionsList);
+                request.getRequestDispatcher("/connections.jsp").forward(request, response);
+            } catch (ParseException ex) {
+                Logger.getLogger(NewConnectionCreate.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } catch (ParseException ex) {
             Logger.getLogger(NewConnectionCreate.class.getName()).log(Level.SEVERE, null, ex);
         }

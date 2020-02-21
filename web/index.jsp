@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12"><h2 class="category">Events around UNCC</h2></div>
-            <div class="col-6"><a href="/ProductList/Stickers"><img src="images/cricket.jpg" alt="World Cup Event" style="width:100%;"/></a></div>
-            <div class="col-6 float-right"><a href="/product/7"><img src="images/soccer.jpg" alt="Soccer" style="width:100%;"/></a></div>
+            <div class="col-6"><a href="#"><img src="images/cricket.jpg" alt="World Cup Event" style="width:100%;"/></a></div>
+            <div class="col-6 float-right"><a href="#"><img src="images/soccer.jpg" alt="Soccer" style="width:100%;"/></a></div>
             <div class="col-12">
                 <div class="row">
                     <div class="col-12"><h2 class="category">Video games</h2></div>
