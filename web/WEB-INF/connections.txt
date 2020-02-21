@@ -1,2 +1,6 @@
 1|Cricket|Cricket Today? at SAC, 4pm|UNCC Cricket Club|Our weekly cricket practice session will take place at SAC|SAC|2019-08-21T19:30
 2|Cricket|Cricket near UTN at 5pm|UNCC Cricket Club|Our weekly cricket practice session will take place at UTN|UTN|2019-08-21T17:30
+3|Cricket|Selling Cricket Bats|Melbourne Sports|We are selling cricket bats at 20% discount|Mallard Creek|2019-08-21T17:30
+4|Soccer|Soccer at backyard|Robert Cole|Looking for amigos to play soccer. Atleast 4-5 people needed|The Lake|2019-08-21T19:30
+5|Soccer|Soccer near UTN at 5pm|Md Sajid|Our weekly soccer practice session will take place at UTN|UTN|2019-08-21T17:30
+6|Soccer|Selling footballs|Melbourne Sports|We are selling footballs at 20% discount|Mallard Creek|2019-08-21T17:30

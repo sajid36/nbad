@@ -17,10 +17,26 @@
             <div class="col-12"><h1 class="category">Connect People Around UNCC Through Sports</h1></div>
             <div class="col-12">
                 <div class="row eventpost">
-                    <div class="col-12"><h2 class="category">Video Games Related Events</h2></div>
-                    <%for (int i = 0; i < connectionList.size(); i++) {%>   
-                    <div class="col-4"><a href="<%=request.getContextPath()%>/connections?action=single&id=<%=connectionList.get(i).getId()%>"><img src="images/cricketPost.jpg" alt="cricket_games" style="width:50%"/></a><p><%=connectionList.get(i).getHost()%></p></div>
-                            <%}%>
+                    <%  int cricket = 0;
+                        int soccer = 0;
+                        for (int i = 0; i < connectionList.size(); i++) {
+                        if(connectionList.get(i).getTopic().equalsIgnoreCase("Cricket")){
+                            if(cricket==0){
+                               %><div class="col-12"><h2 class="category"><%=connectionList.get(i).getTopic()%> Events</h2></div> 
+                               <% cricket=1;}
+                            %>
+                            <div class="col-4"><a href="<%=request.getContextPath()%>/connections?connectionId=<%=connectionList.get(i).getId()%>"><img src="images/cricketPost.jpg" alt="cricket_games" style="width:100%"/><p class="text-center"><%=connectionList.get(i).getName()%></p></a></div>
+                            <%}
+                        if(connectionList.get(i).getTopic().equalsIgnoreCase("Soccer")){
+                            if(soccer==0){
+                               %><div class="col-12"><h2 class="category"><%=connectionList.get(i).getTopic()%> Events</h2></div> 
+                               <% soccer=1;}
+                            %>
+                            <div class="col-4"><a href="<%=request.getContextPath()%>/connections?connectionId=<%=connectionList.get(i).getId()%>"><img src="images/FIFA-20.jpg" alt="cricket_games" style="width:100%"/><p class="text-center"><%=connectionList.get(i).getName()%></p></a></div>
+                            <%}
+                    }
+                    %>   
+                    
 
                     <!--
                     <div class="col-4"><a href="connection.html"><img src="images/FIFA-20.jpg" alt="FIFA_games" style="width:100%;"/></a><p>WCG FIFA-20 to take place on 20th Jan. Register NOW!!</p></div>

@@ -56,7 +56,7 @@
                         <a class="nav-link" href="#">NBA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<%=request.getContextPath()%>/connections?action=all">Connections/Events</a>
+                        <a class="nav-link" href="<%=request.getContextPath()%>/connections">Connections/Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Forum</a>

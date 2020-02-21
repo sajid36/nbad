@@ -88,8 +88,11 @@ public class NewConnectionCreate extends HttpServlet {
         String HardDB = getServletContext().getRealPath("/") + "WEB-INF\\connections.txt";
         
         //request for all connections
-        String action = request.getParameter("action");
-        if (action.equalsIgnoreCase("all")) {
+        String action = null;
+        action = request.getParameter("connectionId");
+        //request for single connection
+               
+        if(action == null || action.isEmpty()){
             //System.out.println(action);
             try {
                 ArrayList<Connection> connectionsList = ConnectionIO.getConnections(HardDB);
@@ -99,10 +102,8 @@ public class NewConnectionCreate extends HttpServlet {
                 Logger.getLogger(NewConnectionCreate.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
-        //request for single connection
-        if (action.equalsIgnoreCase("single")) {
-            String id = request.getParameter("id");
+        else{
+            String id = action;
             try {
                 Connection connection = ConnectionIO.getConnection(id, HardDB);
                 request.setAttribute("singleConnection", connection);
