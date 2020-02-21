@@ -12,37 +12,38 @@
             <div class="col-md-auto">
                 <form action="newConnection" method="post">
                     <div class="form-group row">
-                        <label for="topic" class="col-sm-2 col-form-label col-form-label-sm">Topic*</label>
+                        <label for="topic" class="col-sm-2 col-form-label col-form-label-sm">Topic</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="topic" required/>  <br />
+                            <input type="radio" name="topic" value="Cricket" required/><span> Cricket     </span>
+                            <input type="radio" name="topic" value="Soccer" required/><span> Soccer </span>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Name*</label>
+                        <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="name" required/>  <br />
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="host" class="col-sm-2 col-form-label col-form-label-sm">Host*</label>
+                        <label for="host" class="col-sm-2 col-form-label col-form-label-sm">Host</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="host" required/>  <br />
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="desc" class="col-sm-2 col-form-label col-form-label-sm">About*</label>
+                        <label for="desc" class="col-sm-2 col-form-label col-form-label-sm">About</label>
                         <div class="col-sm-10">
                             <textarea class="form-control form-control-sm" id="colFormLabelSm" name="desc" required/></textarea> <br />
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="location" class="col-sm-2 col-form-label col-form-label-sm">Where*</label>
+                        <label for="location" class="col-sm-2 col-form-label col-form-label-sm">Where</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control form-control-sm" id="colFormLabelSm" name="location" required/><br />
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="time" class="col-sm-2 col-form-label col-form-label-sm">When*</label>
+                        <label for="time" class="col-sm-2 col-form-label col-form-label-sm">When</label>
                         <div class="col-sm-10">
                             <input type="datetime-local" class="form-control form-control-sm" id="colFormLabelSm" name="time" value="2018-06-12T19:30"
                                    min="2018-06-07T00:00" max="2020-06-14T00:00" required>  <br />

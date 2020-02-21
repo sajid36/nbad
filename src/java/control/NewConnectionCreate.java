@@ -105,8 +105,15 @@ public class NewConnectionCreate extends HttpServlet {
             String id = action;
             try {
                 Connection connection = ConnectionIO.getConnection(id, HardDB);
-                request.setAttribute("singleConnection", connection);
-                request.getRequestDispatcher("/connection.jsp").forward(request, response);
+                if(connection == null){
+                    String message = "Error: Requested Item not found in DB";
+                    request.setAttribute("message", message);
+                    request.getRequestDispatcher("/error.jsp").forward(request, response);  
+                }
+                else{
+                 request.setAttribute("singleConnection", connection);
+                request.getRequestDispatcher("/connection.jsp").forward(request, response);   
+                }
             } catch (ParseException ex) {
                 Logger.getLogger(NewConnectionCreate.class.getName()).log(Level.SEVERE, null, ex);
             }
