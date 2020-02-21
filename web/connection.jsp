@@ -26,9 +26,9 @@
                     <div class="col-6 float-right">
                         <b>20 people going. Want to join us?</b><br>
                         <form>
-                            <button type="submit" class="btn btn-success" formaction="savedConnections.html">Yes</button>
-                            <button type="submit" class="btn btn-danger" formaction="savedConnections.html">No</button>
-                            <button type="submit" class="btn btn-warning" formaction="savedConnections.html">Maybe</button>
+                            <button type="submit" class="btn btn-success" formaction="savedConnections.jsp">Yes</button>
+                            <button type="submit" class="btn btn-danger" formaction="savedConnections.jsp">No</button>
+                            <button type="submit" class="btn btn-warning" formaction="savedConnections.jsp">Maybe</button>
                         </form>
                     </div>
                     <br><br>
