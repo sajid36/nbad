@@ -7,6 +7,10 @@
         <servlet-name>NewConnectionCreate</servlet-name>
         <servlet-class>control.NewConnectionCreate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserController</servlet-name>
+        <servlet-class>control.UserController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>NewConnectionCreate</servlet-name>
         <url-pattern>/newConnection</url-pattern>
@@ -16,8 +20,8 @@
         <url-pattern>/connections</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>NewConnectionCreate</servlet-name>
-        <url-pattern>/post</url-pattern>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/userController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
