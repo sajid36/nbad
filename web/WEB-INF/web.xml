@@ -23,6 +23,10 @@
         <servlet-name>UserController</servlet-name>
         <url-pattern>/userController</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

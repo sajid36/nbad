@@ -15,25 +15,15 @@ import java.io.Serializable;
 public class UserConnection implements Serializable {
     
     private String connectionId;
-    private String userId;
     private String rsvp;
     
     public UserConnection() {
     }
     
-    public UserConnection(String userId, String connectionId, String rsvp) {
-        this.userId = userId;
+    public UserConnection(String connectionId, String rsvp) {
         this.connectionId = connectionId;
         this.rsvp = rsvp;
 
-    }
-    
-    public String getUserId() {
-        return userId;
-    }
-    
-    void setUserId() {
-        this.userId = userId;
     }
     
     public String getConnectionId() {

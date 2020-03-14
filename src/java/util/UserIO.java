@@ -21,6 +21,7 @@ import java.util.StringTokenizer;
 import model.Address;
 import model.Connection;
 import model.User;
+import model.UserConnection;
 
 /**
  *
@@ -94,30 +95,28 @@ public class UserIO {
         return user;
     }
 
-    public static ArrayList<Connection> getConnections(String filename) throws IOException, ParseException {
-        ArrayList<Connection> connections = new ArrayList<>();
+    public static ArrayList<UserConnection> getUserConnections (String userId, String filename) throws IOException, ParseException {
+        ArrayList<UserConnection> userConnections = new ArrayList<>();
         try (BufferedReader in = new BufferedReader(
                 new FileReader(filename))) {
             String line = in.readLine();
             while (line != null) {
                 try {
                     StringTokenizer t = new StringTokenizer(line, "|");
-                    String id = t.nextToken();
-                    String topic = t.nextToken();
-                    String name = t.nextToken();
-                    String host = t.nextToken();
-                    String about = t.nextToken();
-                    String location = t.nextToken();
-                    String time = t.nextToken();
-                    Connection connection = new Connection(id, name, topic, about, location, time, host);
-                    connections.add(connection);
+                    String uniqueUserId = t.nextToken();
+                    if (uniqueUserId.equalsIgnoreCase(userId)) {
+                        String connectionId = t.nextToken();
+                        String rsvp = t.nextToken();
+                        UserConnection userConnection = new UserConnection(connectionId, rsvp);
+                        userConnections.add(userConnection);
+                    }
                     line = in.readLine();
                 } catch (NoSuchElementException e) {
                     line = in.readLine();
                 }
             }
         }
-        return connections;
+        return userConnections;
     }
 
     public static HashMap<String, Connection> getConnectionsMap(String filename) throws IOException, ParseException {

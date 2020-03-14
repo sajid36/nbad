@@ -3,6 +3,16 @@
     Created on : Feb 17, 2020, 12:56:02 AM
     Author     : sajid
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+        <c:choose>
+            <c:when test="${sessionScope.user != null}">
+                <c:set var="button" value="Logout" />
+                <c:set var="userName" value="${sessionScope.user.FName}"/>
+            </c:when>
+            <c:when test="${sessionScope.user == null}">
+                <c:set var="button" value="Login"/>
+            </c:when>
+        </c:choose>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark customNav">
     <div class="container">
         <div class="navbar-header">
@@ -17,10 +27,20 @@
                     <a class="nav-link" href="#">Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sign up</a>
+                    <c:if test="${button == 'Login'}">
+                        <a class="nav-link" href="#">Sign up</a>
+                    </c:if>
+                    <c:if test="${button == 'Logout'}">
+                        <a class="nav-link" href="savedConnections.jsp">My Connections</a>
+                    </c:if>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.jsp">Login</a>
+                    <c:if test="${button == 'Login'}">
+                        <a class="nav-link" href="login.jsp">Login</a>
+                    </c:if>
+                    <c:if test="${button == 'Logout'}">
+                        <a class="nav-link" href="<%=request.getContextPath()%>/logout?action=true">Hi ${userName}, Logout</a>
+                    </c:if>
                 </li>
                 <!--
                 <li class="nav-item dropdown">

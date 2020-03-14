@@ -74,7 +74,13 @@ public class UserController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String action = request.getParameter("action");
+        if(action.equalsIgnoreCase("true")){
+            HttpSession session = request.getSession(false);
+            session.removeAttribute("user");
+            session.invalidate();
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
+        }
     }
 
     /**
@@ -93,13 +99,12 @@ public class UserController extends HttpServlet {
         String password = request.getParameter("password");
         try {
             User user = findUserId(uname);
-            HttpSession session = request.getSession(false);
+            HttpSession session = request.getSession(true);
             session.setAttribute("user", user);
+            request.getRequestDispatcher("/index.jsp").forward(request, response);
         } catch (ParseException ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
     }
 
     /**
