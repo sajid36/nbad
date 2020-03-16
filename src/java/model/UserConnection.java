@@ -16,13 +16,17 @@ public class UserConnection implements Serializable {
     
     private String connectionId;
     private String rsvp;
+    private String eventName;
+    private String category;
     
     public UserConnection() {
     }
     
-    public UserConnection(String connectionId, String rsvp) {
+    public UserConnection(String connectionId, String rsvp, String eventName, String category) {
         this.connectionId = connectionId;
         this.rsvp = rsvp;
+        this.eventName = eventName;
+        this.category = category;
 
     }
     
@@ -30,7 +34,7 @@ public class UserConnection implements Serializable {
         return connectionId;
     }
     
-    void setConnectionId() {
+    public void setConnectionId(String connectionId) {
         this.connectionId = connectionId;
     }
     
@@ -38,7 +42,23 @@ public class UserConnection implements Serializable {
         return rsvp;
     }
     
-    void setRsvp() {
+    public void setRsvp(String rsvp) {
         this.rsvp = rsvp;
+    }
+    
+    public String getEventName() {
+        return eventName;
+    }
+    
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
+    }
+    
+    public String getCategory() {
+        return category;
+    }
+    
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

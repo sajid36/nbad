@@ -7,7 +7,7 @@
         <c:choose>
             <c:when test="${sessionScope.user != null}">
                 <c:set var="button" value="Logout" />
-                <c:set var="userName" value="${sessionScope.user.FName}"/>
+                <c:set var="userName" value="${sessionScope.user.email}"/>
             </c:when>
             <c:when test="${sessionScope.user == null}">
                 <c:set var="button" value="Login"/>
@@ -39,7 +39,7 @@
                         <a class="nav-link" href="login.jsp">Login</a>
                     </c:if>
                     <c:if test="${button == 'Logout'}">
-                        <a class="nav-link" href="<%=request.getContextPath()%>/logout?action=true">Hi ${userName}, Logout</a>
+                        <a class="nav-link" href="<%=request.getContextPath()%>/task?action=logout">Hi ${userName}, Logout</a>
                     </c:if>
                 </li>
                 <!--

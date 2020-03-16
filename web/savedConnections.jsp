@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="header.jsp" />
 <jsp:include page="navigation.jsp" />
 <div id="wrapper">
@@ -15,39 +16,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <c:forEach items="${sessionScope.userConnections}" var="userConnection">
                         <tr>
-                            <th scope="row">Cricket Today? at SAC, 4pm</th>
-                            <td>Cricket</td>
-                            <td>Going</td>
+                            <th scope="row"><c:out value="${userConnection.eventName}"/></th>
+                            <td><c:out value="${userConnection.category}"/></td>
+                            <td><c:out value="${userConnection.rsvp}"/></td>
                             <td>
                                 <form>
-                                    <button type="submit" class="btn btn-secondary"  formaction="connection.html">Update</button>
-                                    <button type="submit" class="btn btn-danger" formaction="connections.html">Delete</button>
+                                    <a href="<%=request.getContextPath()%>/task?action=update&connectionId=${userConnection.connectionId}">
+                                        <input class="btn btn-secondary" type="button" value="Update" />
+                                    </a>
+                                    <a href="<%=request.getContextPath()%>/task?action=delete&connectionId=${userConnection.connectionId}">
+                                        <input class="btn btn-danger" type="button" value="Delete" />
+                                    </a>
                                 </form>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">Cricket near UTN at 5pm</th>
-                            <td>Cricket</td>
-                            <td>Maybe</td>
-                            <td>
-                                <form>
-                                    <button type="submit" class="btn btn-secondary"  formaction="connection.html">Update</button>
-                                    <button type="submit" class="btn btn-danger" formaction="connections.html">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">FUT online?</th>
-                            <td>Video Games</td>
-                            <td>Going</td>
-                            <td>
-                                <form>
-                                    <button type="submit" class="btn btn-secondary"  formaction="connection.html">Update</button>
-                                    <button type="submit" class="btn btn-danger" formaction="connections.html">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
+                        </c:forEach>
                     </tbody>
                 </table>
             </div>

@@ -1,2 +1,0 @@
-1|9625 Vince Cir|Apt E|Charlotte|NC|28213|USA 
-2|9627 Vince Cir|Apt F|Charlotte|NC|28213|USA 

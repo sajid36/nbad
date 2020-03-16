@@ -20,7 +20,7 @@
                     <div class="form-group row">
                         <label for="uname" class="col-sm-2 col-form-label col-form-label-sm">Username</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control form-control-sm" id="uname" name="uname" required/>  <br />
+                            <input type="email" class="form-control form-control-sm" id="uname" name="uname" required/>  <br />
                         </div>
                     </div>
                     <div class="form-group row">
