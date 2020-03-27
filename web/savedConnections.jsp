@@ -23,11 +23,11 @@
                             <td><c:out value="${userConnection.rsvp}"/></td>
                             <td>
                                 <form>
-                                    <a href="<%=request.getContextPath()%>/task?action=update&connectionId=${userConnection.connectionId}">
-                                        <input class="btn btn-secondary" type="button" value="Update" />
+                                    <a class="btn btn-secondary" href="<%=request.getContextPath()%>/task?action=update&connectionId=${userConnection.connectionId}">
+                                    Update
                                     </a>
-                                    <a href="<%=request.getContextPath()%>/task?action=delete&connectionId=${userConnection.connectionId}">
-                                        <input class="btn btn-danger" type="button" value="Delete" />
+                                    <a class="btn btn-danger" href="<%=request.getContextPath()%>/task?action=delete&connectionId=${userConnection.connectionId}">
+                                    Delete
                                     </a>
                                 </form>
                             </td>

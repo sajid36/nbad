@@ -26,14 +26,14 @@
                     <div class="col-6 float-right">
                         <b>20 people going. Want to join us?</b><br>
                         <form>
-                            <a href="<%=request.getContextPath()%>/task?action=rsvp&connectionId=<%=connection.getId()%>&response=Yes">
-                                <input class="btn btn-success" type="button" value="Yes" />
+                            <a class="btn btn-success" href="<%=request.getContextPath()%>/task?action=rsvp&connectionId=<%=connection.getId()%>&response=Yes">
+                            Yes    
                             </a>
-                            <a href="<%=request.getContextPath()%>/task?action=rsvp&connectionId=<%=connection.getId()%>&response=No">
-                                <input class="btn btn-danger" type="button" value="No" />
+                            <a class="btn btn-danger" href="<%=request.getContextPath()%>/task?action=rsvp&connectionId=<%=connection.getId()%>&response=No">
+                             No
                             </a>
-                            <a href="<%=request.getContextPath()%>/task?action=rsvp&connectionId=<%=connection.getId()%>&response=Maybe">
-                                <input class="btn btn-warning" type="button" value="Maybe" />
+                            <a class="btn btn-warning" href="<%=request.getContextPath()%>/task?action=rsvp&connectionId=<%=connection.getId()%>&response=Maybe">
+                             Maybe  
                             </a>
                         </form>
                     </div>
